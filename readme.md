@@ -12,5 +12,5 @@ and a PowerShell script that does the command line handling.
 
 ## Configuration
 You can set the mapping of input source names to the numerical values in
-`config.json`. This file will be read my the powershell function to provide the
+`config.json`. This file will be read by the powershell function to provide the
 parameter suggestions.
