@@ -11,6 +11,7 @@ function mc {
     $attributes = New-Object System.Collections.ObjectModel.Collection[System.Attribute]
 
     $attribute1 = New-Object System.Management.Automation.ParameterAttribute
+    $attribute1.Position = 0
     $attributes.Add($attribute1)
 
     $attribute2 = New-Object System.Management.Automation.ValidateSetAttribute($config.keys)
@@ -26,7 +27,7 @@ function mc {
     return $paramDictionary
   }
 
-  begin{
+  begin {
     $monitorInput = $PSBoundParameters[$parameterName]
     $value = if (-not $monitorInput) { $null }  else { $config[$monitorInput] }
   }
